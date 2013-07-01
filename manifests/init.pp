@@ -109,6 +109,9 @@ class dovecot (
     file { '/etc/dovecot/conf.d/auth-sql.conf.ext':
         content => template('dovecot/conf.d/auth-sql.conf.ext.erb'),
     }
+    file { '/etc/dovecot/conf.d/auth-postfix-sasl.conf.ext':
+        content => template('dovecot/conf.d/auth-postfix-sasl.conf.ext.erb'),
+    }
 
 }
 
